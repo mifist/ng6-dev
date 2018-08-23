@@ -1,0 +1,13 @@
+.active {
+	display: block;
+}
+.has-submenu {
+	.submenu {
+		position: absolute;
+	}
+	.dropdown-toggle {
+		&:after {
+			right: 0;
+		}
+	}
+}

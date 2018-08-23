@@ -1,0 +1,30 @@
+<div class="grid-container">
+  <div class="grid-x">
+    <div class="cell">
+      <h2>{{ page_title }}</h2>
+    </div>
+  </div>
+  <div class="grid-x grid-margin-x">
+    <div class="cell medium-6 large-8">
+      <form>
+        <div class="input-group">
+          <span class="input-group-label">{{inputLabel}}</span>
+          <input id="text_field"  type="text" name="text_field"
+                 title="{{inputPlacrholder}}"
+                 [placeholder]="inputPlacrholder">
+          <input type="submit" class="button"
+                  (click)="addFields()" value="{{btnName}}">
+        </div>
+        <span class="error-mes">This field is empty.</span>
+      </form>
+    </div>
+    <div class="cell medium-6 large-4">
+      <h3>Fields count: ({{ itemCound }}) </h3>
+      <div class="res-fields">
+        <p class="life-fields" *ngFor="let field of fields_txt">
+          {{field}}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

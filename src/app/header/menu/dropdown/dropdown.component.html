@@ -1,0 +1,13 @@
+<li class="nav-item has-submenu" (click)="toggleDropdown()">
+  <a class="nav-link dropdown-toggle" href="#">
+    {{ dropdownTitle }}
+  </a>
+  <ul class="submenu menu vertical" data-submenu [ngClass]="{active: expanded}">
+    <li *ngFor="let router of listRouters; index as i">
+      <a [routerLink]="router.path"
+         class="dropdown-item" href="#"> {{ router.name }} </a>
+    </li>
+  </ul>
+</li>
+
+

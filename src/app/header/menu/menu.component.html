@@ -1,0 +1,14 @@
+<ul class="dropdown menu bar-menu" data-responsive-menu="drilldown medium-accordion" >
+  <li class="nav-item"
+      *ngFor="let menu of navigationRouters; index as i">
+    <a class="nav-link" [routerLink]="menu.path" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+true}">{{ menu.name }}</a>
+  </li>
+  <app-dropdown [dropdownTitle]="'Dropdown'"
+                (checkedValue)="handleDropdownSelection($event)"></app-dropdown>
+</ul>
+
+
+
+
+
